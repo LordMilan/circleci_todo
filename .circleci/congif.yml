@@ -1,0 +1,28 @@
+version: 2.1
+
+jobs:
+  build:
+    working_directory: ~/circleci_todo
+    docker:
+      - image: "cimg/node:16.15.01"
+    steps:
+      - checkout
+      - run: |
+          npm run install
+          npm run build
+
+  test:
+    working_directory: ~/circleci_todo
+    docker:
+      - image:"cimg/node:16.15.01"
+    steps:
+      - checkout
+      - run: |
+          echo "test is starting"
+          npm run test
+
+workflows:
+  build_and_test:
+    jobs:
+      - build
+      - test 
