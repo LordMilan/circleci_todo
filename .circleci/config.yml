@@ -4,7 +4,7 @@ jobs:
   build:
     working_directory: ~/circleci_todo
     docker:
-      - image: "cimg/node:16.15.01"
+      - image: "cimg/node:16.15.1"
     steps:
       - checkout
       - run: |
@@ -14,7 +14,7 @@ jobs:
   test:
     working_directory: ~/circleci_todo
     docker:
-      - image: "cimg/node:16.15.01"
+      - image: "cimg/node:16.15.1"
     steps:
       - checkout
       - run: |
