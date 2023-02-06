@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test": "echo \"its working in test branch\""
+    "test": "echo \"Its working in test branch\""
   },
   "dependencies": {
     "core-js": "^3.8.3",
