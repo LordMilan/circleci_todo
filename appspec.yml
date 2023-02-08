@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: ./*
-    destination: /home/ubuntu/test_app
+    destination: /home/ubuntu/test_app/
 hooks:
   AfterInstall:
     - location: scrips/build.sh
