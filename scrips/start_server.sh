@@ -1,2 +1,2 @@
-cd /home/ubuntu/test_app/
+cd /home/ubuntu/test/
 sudo npm run serve
