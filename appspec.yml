@@ -1,0 +1,21 @@
+version: 0.0
+os: linux
+files:
+  - source: .
+    destination: /test/
+  - source: source
+    destination: /test/myApp
+hooks:
+  BeforeInstall:
+    - location: /home/ubuntu/Scripts/UnzipResourceBundle.sh
+    - location: /home/ubuntu/Scripts/UnzipDataBundle.sh
+  AfterInstall:
+    - location: /home/ubuntu/Scripts/RunResourceTests.sh
+      timeout: 180
+  ApplicationStart:
+    - location: /home/ubuntu/Scripts/RunFunctionalTests.sh
+      timeout: 3600
+#   ValidateService:
+#     - location: Scripts/MonitorService.sh
+#       timeout: 3600
+#       runas: codedeployuser
