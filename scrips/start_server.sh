@@ -1,2 +1,2 @@
-cd /home/ubuntu/test/
-sudo npm run serve
+cd /home/ubuntu/test/dist/
+pm2 serve . 8085
