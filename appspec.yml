@@ -4,7 +4,7 @@ files:
   - source: ./*
     destination: /home/ubuntu/test_app
 hooks:
-  BeforeInstall:
+  AfterInstall:
     - location: scrips/build.sh
       timeout: 3000
       runas: root
