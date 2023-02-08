@@ -3,7 +3,8 @@ version: 0.2
 phases:
   install:
     commands:
-      - rm -rf node_modules package-lock.json && npm install
+      - npm install
+      - npm i @vue/cli-service
   build:
     commands:
       - npm run build
