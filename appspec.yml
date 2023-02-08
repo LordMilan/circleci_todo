@@ -1,14 +1,14 @@
 version: 0.0
 os: linux
 files:
-  - source: .
+  - source: ./*
     destination: /home/ubuntu/test_app
 hooks:
   BeforeInstall:
-    - location: scripts/build.sh
+    - location: scrips/build.sh
       timeout: 3000
       runas: root
-    - location: scripts/start_server.sh
+    - location: scrips/start_server.sh
       timeout: 300
       runas: root
 
